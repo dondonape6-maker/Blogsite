@@ -12,7 +12,7 @@ class Post(models.Model):
         author = models.ForeignKey(User, on_delete=models.CASCADE,
                                    related_name= 'blog_post')
 
-        body = models. TextChoices()
+        body = models.TextField()
         publish = models.DateTimeField(default=timezone.now)
         created = models.DateTimeField(auto_now_add=True)
         status = models.CharField(max_length=2,
